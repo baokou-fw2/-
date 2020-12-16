@@ -1,0 +1,20 @@
+<view class="s3">
+<image src="/pages/start/2.jpeg"></image>
+
+  <view class="ss">温度：</view>
+  <view class="s">{{temp}}</view>
+  <view class="ss">湿度：</view>
+  <view class="s">{{humidity}}</view>
+  <view class="ss">ppm:</view>
+  <view class="s">{{ppm}}</view>
+
+</view>
+
+<view>
+  <view class="ss">tips:</view>
+  <view >{{humtip}}</view>
+  <view >{{ppmtip}}</view>
+</view>
+
+
+<button  bindtap="go">查看长期数据</button>

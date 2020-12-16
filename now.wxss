@@ -1,0 +1,14 @@
+/* pages/wifi_station/huanjingnow/now.wxss */
+.ss{
+  background-color:#64c8fa; 
+
+
+
+
+}
+.s{
+  background-color:red; 
+
+
+
+}

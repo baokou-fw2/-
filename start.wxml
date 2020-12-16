@@ -1,0 +1,12 @@
+<view class='tittle'>climate</view>
+<view class='tittle'>box</view>
+<image style="width: 300px; height: 200px; background-color: #eeeeee;" mode="{{item.mode}}" src="/pages/start/464.jpg"></image>
+<view class='t'>please log in</view>
+<text>divice id</text>
+<input type="text" bindinput='id'></input>
+<text>apik</text>
+<input type="text" bindinput='apik'></input>
+
+<button class="btn1" bindtap="navigate">居家模式</button>
+
+<button class="btn1" bindtap="navi">我要出门</button>

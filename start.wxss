@@ -1,0 +1,28 @@
+/* start.wxss */
+
+/* start.wxss */
+
+.intro {
+  padding: 24px 10%;
+  color: #424242;
+  line-height: 1.5;
+}
+
+.btn1{
+  width: 60%;
+}
+
+.tittle{
+  font-size:20px;
+  width:200px;
+  font-weight:bold;
+color:blue;
+text-align:center;
+}
+
+.t{text-align:center;
+color:rgb(248, 10, 10);}
+
+.btn1{
+  width: 60%;
+}

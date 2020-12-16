@@ -1,0 +1,79 @@
+<view class="header">
+  <view class="top">
+    <view class="city">
+      {{city}}
+    </view>
+    <view class="search">
+      <input placeholder="输入城市名" bindinput="bindKeyInput" placeholder-style="color:white"></input>
+      <view class="bt_search" bindtap="search">
+        <icon type="search" size="18" color="white"></icon>
+      </view>
+    </view>
+  </view>
+
+  <view class="center">
+    <view class="tmp">
+      {{tmp}}°
+    </view>
+    <image mode="widthFix" class="cond-image" src="https://moyv.top/wechat/images/weather/{{imgsrc}}.png">
+    </image>
+  </view>
+  <view class="bottom">
+    <view>{{wind_dir}} {{wind_sc}}级</view>
+    <view>湿度 {{hum}}%</view>
+    <view>空气质量{{aqi}}</view>
+    
+  </view>
+</view>
+
+
+<view class="mask" catchtouchmove="preventTouchMove" wx:if="{{showModal}}"></view>
+ 
+<view class="modalDlg" wx:if="{{showModal}}">
+  
+   
+      <view>（1）{{chuanyi}}</view>
+     <view>（2）{{kongqi}}</view>
+     <view>（3）{{humtip}}</view>
+      <button bindtap="go">点我可以关掉对话框</button>
+</view>
+ 
+<button bindtap="submit">出行弹窗!!</button>
+
+
+<view class="container">
+  <view class="hourly_title">24小时预报</view>
+  <scroll-view scroll-x="true" class="hourly">
+    <view class="h_item" wx:for="{{hourly}}" wx:key="index">
+      <text class="h_time">{{item.time}}</text>
+      <view class="h_img">
+        <image mode="widthFix" src="https://moyv.top/wechat/images/weather/{{item.imgsrc}}.png"></image>
+      </view>
+      <text class="h_tmp">{{item.tmp}}°</text>
+      <text class="h_wind_dir">{{item.wind_dir}}</text>
+      <text class="h_wind_sc">{{item.wind_sc}}级</text>
+    </view>
+
+  </scroll-view>
+  <view class="hourly_title">7天预报</view>
+  <scroll-view scroll-x="true" class="daily">
+    <view class="d_item" wx:for="{{daily_forecast}}" wx:key="index">
+      <text class="d_txt">{{item.d_txt}}</text>
+      <text class="d_date">{{item.d_date}}</text>
+      <view class="h_img">
+        <image mode="widthFix" src="https://moyv.top/wechat/images/weather/{{item.imgsrc_d}}.png"></image>
+      </view>
+      <text class="h_tmp">{{item.tmp_min}}°~{{item.tmp_max}}°</text>
+      <view class="h_img">
+        <image mode="widthFix" src="https://moyv.top/wechat/images/weather/{{item.imgsrc_n}}.png"></image>
+      </view>
+      <text class="d_wind_dir">{{item.wind_dir}}</text>
+      <text class="d_wind_sc">{{item.wind_sc}}级</text>
+    </view>
+
+  </scroll-view>
+</view>
+
+<view class="footer">
+-天气数据来自和风天气api-
+</view>
